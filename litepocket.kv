@@ -1,0 +1,42 @@
+<MainLayout>:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 10
+    Header:
+        id: header
+    Label:
+        text: 'Hello, World!'
+        size_hint_y: 1
+    Footer:
+        id: footer
+
+<Header>:
+    size_hint_y: None
+    height: '50dp'
+    spacing: 10
+    BoxLayout:
+        size_hint_x: 1
+        Label:
+            text: 'Balance: 0.00 LTC ≈ 0.00 $'
+            size_hint_x: 0.8
+            halign: 'left'
+            valign: 'middle'
+            text_size: self.width, self.height
+        Button:
+            text: 'Menu'
+            size_hint_x: 0.2
+
+<Footer>:
+    size_hint_y: None
+    height: '50dp'
+    spacing: 10
+    BoxLayout:
+        Button:
+            text: 'History'
+            size_hint_x: 0.33
+        Button:
+            text: 'Send'
+            size_hint_x: 0.33
+        Button:
+            text: 'Receive'
+            size_hint_x: 0.33
