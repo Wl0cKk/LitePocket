@@ -14,29 +14,88 @@
     size_hint_y: None
     height: '50dp'
     spacing: 10
-    BoxLayout:
+    MDBoxLayout:
         size_hint_x: 1
-        Label:
+        MDLabel:
             text: 'Balance: 0.00 LTC ≈ 0.00 $'
             size_hint_x: 0.8
             halign: 'left'
             valign: 'middle'
             text_size: self.width, self.height
-        Button:
-            text: 'Menu'
-            size_hint_x: 0.2
+
+        MDIconButton:
+            icon: 'menu'
+            theme_icon_color: "Custom"
+            icon_color: "white"
+            size_hint_x: None
+            width: dp(40)
+            pos_hint: {"right": 1}
 
 <Footer>:
     size_hint_y: None
     height: '50dp'
     spacing: 10
-    BoxLayout:
-        Button:
-            text: 'History'
-            size_hint_x: 0.33
-        Button:
-            text: 'Send'
-            size_hint_x: 0.33
-        Button:
-            text: 'Receive'
-            size_hint_x: 0.33
+    MDBoxLayout:
+        orientation: 'horizontal'
+        size_hint_x: 1
+        spacing: 7
+
+        MDButton:
+            style: "elevated"
+            theme_width: "Custom"
+            theme_shadow_color: "Custom"
+            height: "56dp"
+            size_hint_x: .5
+
+            MDButtonIcon:
+                pos_hint: {"center_x": .5, "center_y": .633}
+                icon: "history"
+                theme_icon_color: "Custom"
+                icon_color: "white"
+
+            MDButtonText:
+                id: text
+                text: "History"
+                theme_text_color: "Custom"
+                text_color: "white"
+                pos_hint: {"center_x": .5, "center_y": .333}
+        
+        MDButton:
+            style: "elevated"
+            theme_width: "Custom"
+            theme_shadow_color: "Custom"
+            height: "56dp"
+            size_hint_x: .5
+
+            MDButtonIcon:
+                pos_hint: {"center_x": .5, "center_y": .633}
+                icon: "call-made"
+                theme_icon_color: "Custom"
+                icon_color: "white"
+
+            MDButtonText:
+                id: text
+                text: "Send"
+                theme_text_color: "Custom"
+                text_color: "white"
+                pos_hint: {"center_x": .5, "center_y": .333}
+        
+        MDButton:
+            style: "elevated"
+            theme_width: "Custom"
+            theme_shadow_color: "Custom"
+            height: "56dp"
+            size_hint_x: .5
+
+            MDButtonIcon:
+                pos_hint: {"center_x": .5, "center_y": .633}
+                icon: "call-received"
+                theme_icon_color: "Custom"
+                icon_color: "white"
+
+            MDButtonText:
+                id: text
+                text: "Recieve"
+                theme_text_color: "Custom"
+                text_color: "white"
+                pos_hint: {"center_x": .5, "center_y": .333}
