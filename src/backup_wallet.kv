@@ -1,8 +1,41 @@
-MDScreen>:
-    md_bg_color: self.theme_cls.backgroundColor
+<MDScreen>:
+    md_bg_color: self.theme_cls.background_color
 
-    MDTabsPrimary:
+    MDTabs:
         id: tabs
-        pos_hint: {"center_x": .5, "center_y": .5}
+        allow_stretch: True
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
 
         MDDivider:
+
+        MDTabsCarousel:
+            id: related_content
+            size_hint_y: None
+            height: self.parent.height - tabs.ids.tab_scroll.height
+
+        MDTabsItem:
+            MDTabsItemIcon:
+                icon: "history"
+            MDTabsItemText:
+                text: "History"
+            MDIcon:
+                icon: "history"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+        MDTabsItem:
+            MDTabsItemIcon:
+                icon: "call-received"
+            MDTabsItemText:
+                text: "Receive"
+            MDIcon:
+                icon: "call-received"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+        MDTabsItem:
+            MDTabsItemIcon:
+                icon: "call-made"
+            MDTabsItemText:
+                text: "Send"
+            MDIcon:
+                icon: "call-made"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
