@@ -17,6 +17,9 @@ class MainLayout(MDBoxLayout):
 class PreInstallationWindow(MDBoxLayout):
     pass
 
+class LockScreenWindow(MDBoxLayout):
+    pass
+
 class MainApp(MDApp):
     def build(self):
         Window.minimum_width = 240
