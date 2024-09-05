@@ -48,14 +48,5 @@ class MainApp(MDApp):
     def generate_wallet(self):
         pass
 
-    def restore_wallet(self):
-        pass
-
-    def backup_seed(self):
-        pass
-
-    def proceed_setup(self):
-        pass
-
 if __name__ == '__main__':
     MainApp().run()
