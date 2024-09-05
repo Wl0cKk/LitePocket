@@ -3,3 +3,4 @@ env
 .idea
 token.dat
 vault.py
+__pycache__

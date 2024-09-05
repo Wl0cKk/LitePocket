@@ -1,0 +1,33 @@
+<PreInstallationWindow>:
+    MDBoxLayout:
+        spacing: 10
+        orientation: 'vertical'
+        pos_hint: {"center_x": 0.5, "center_y": 0.6}
+        size_hint_y: None
+
+        MDLabel:
+            text: "Private Key:"
+            pos_hint: {"center_x": 0.6}
+            height: self.texture_size[1]
+
+        MDTextField:
+            id: wallet
+            hint_text: "output"
+            multiline: False
+            size_hint_x: 0.8
+            pos_hint: {"center_x": 0.5}
+        
+        MDButton:
+            style: "elevated"
+            theme_width: "Custom"
+            theme_shadow_color: "Custom"
+            height: "56dp"
+            size_hint_x: 0.8  # Добавлено
+            pos_hint: {"center_x": 0.5}
+
+            MDButtonText:
+                id: text
+                text: "Apply"
+                theme_text_color: "Custom"
+                text_color: "white"
+                pos_hint: {"center_x": .5, "center_y": .5}
